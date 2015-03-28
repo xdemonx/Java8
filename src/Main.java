@@ -14,32 +14,14 @@ public class Main {
     }
 
     public void run() {
-        students = new ArrayList<Student>();
+        students = new ArrayList<>();
         while (in.hasNextLine()) {
             String[] line = in.nextLine().split(" ");
             students.add(new Student(line[0], line[1], line[2], Integer.parseInt(line[3])));
         }
 
+        //TODO: написать на StreamAPI вывод мапы <Город> -> <Количество_студентов_из_этого_города>
 
     }
-
-    public class NameCity {
-        String name;
-        String city;
-
-        public NameCity(String name, String city) {
-            this.name = name;
-            this.city = city;
-        }
-
-        @Override
-        public String toString() {
-            return "NameCity{" +
-                    "name='" + name + '\'' +
-                    ", city='" + city + '\'' +
-                    '}';
-        }
-    }
-
 
 }
